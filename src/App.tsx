@@ -28,7 +28,8 @@ const router = createBrowserRouter([
     element: <SecondPage />,
   },
 ]);
-console.log('hhh)
+console.log('hello)
+
 function App() {
   return (
     <div>
