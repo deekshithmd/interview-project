@@ -28,7 +28,6 @@ const router = createBrowserRouter([
     element: <SecondPage />,
   },
 ]);
-console.lof('hello')
 
 function App() {
   return (
