@@ -1,37 +1,35 @@
-import AuthPage from "./pages/AuthPage";
-import FirstPage from "./pages/FirstPage";
-import HomePage from "./pages/HomePage";
-import LandingPage from "./pages/LandingPage";
-import SecondPage from "./pages/SecondPage";
+import AuthPage from './pages/AuthPage';
+import FirstPage from './pages/FirstPage';
+import HomePage from './pages/HomePage';
+import LandingPage from './pages/LandingPage';
+import SecondPage from './pages/SecondPage';
 
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <LandingPage />,
   },
   {
-    path: "auth",
+    path: 'auth',
     element: <AuthPage />,
   },
   {
-    path: "home",
+    path: 'home',
     element: <HomePage />,
   },
   {
-    path: "first",
+    path: 'first',
     element: <FirstPage />,
   },
   {
-    path: "second",
+    path: 'second',
     element: <SecondPage />,
   },
 ]);
 
 function App() {
-
-  console.log('hello')
   return (
     <div>
       <RouterProvider router={router} />
