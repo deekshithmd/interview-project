@@ -1,8 +1,8 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 export default function AuthPage() {
   const navigate = useNavigate();
   const handleLogin = () => {
-    navigate('/home');
+    navigate("/home");
   };
   return (
     <div>
