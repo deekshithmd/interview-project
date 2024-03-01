@@ -1,31 +1,18 @@
-import { useAuth0 } from "@auth0/auth0-react";
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import { Navbar } from "../../components/Navbar";
+
 export default function LandingPage() {
-  const { loginWithRedirect, user, logout, isAuthenticated } = useAuth0();
-  console.log("connected", user);
   return (
-    <div>
-      <Link to="/auth" className="underline text-blue-700">
-        Auth
-      </Link>
-      <h1 className="text-2xl text-red-500">Landing Page edit</h1>
-      {!isAuthenticated ? (
-        <button className="border" onClick={() => loginWithRedirect()}>
-          Log In
-        </button>
-      ) : (
-        <div>
-          <img src={user?.picture} className="h-10 w-10 rounded-full" />
-          <button
-            className="border"
-            onClick={() =>
-              logout({ logoutParams: { returnTo: window.location.origin } })
-            }
-          >
-            Log Out
-          </button>
-        </div>
-      )}
+    <div className="w-full h-screen flex flex-col items-center justify-start">
+      <Navbar />
+      <div className="h-full mt-16 flex flex-col items-center justify-center w-full bg-gray-200">
+        <h1 className="text-blue-700 font-bold text-7xl mb-5 text-center">
+          Interview Schedule
+        </h1>
+        <h3 className="text-blue-700 font-bold text-7xl text-center">
+          made easy
+        </h3>
+      </div>
       <Outlet />
     </div>
   );
