@@ -1,4 +1,4 @@
-import AuthPage from "./pages/AuthPage";
+import ProfilePage from "./pages/ProfilePage";
 import HomePage from "./pages/HomePage";
 import LandingPage from "./pages/LandingPage";
 
@@ -10,8 +10,8 @@ const router = createBrowserRouter([
     element: <LandingPage />,
   },
   {
-    path: "auth",
-    element: <AuthPage />,
+    path: "profile",
+    element: <ProfilePage />,
   },
   {
     path: "home",

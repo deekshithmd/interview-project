@@ -10,7 +10,11 @@ const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   console.log("user", user);
 
   const handleLogin = () => {
-    loginWithRedirect();
+    loginWithRedirect({
+      appState: {
+        returnTo: "/profile",
+      },
+    });
   };
 
   const handleLogout = () =>
